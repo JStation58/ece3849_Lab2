@@ -107,7 +107,7 @@ int main(void)
             int op;
             fifo_get(&op);
             if (op == 3) {
-                triggerType = triggerType ^ 1;
+                triggerType = !triggerType;
             } else if (op == 1) {
                 if (voltsPerDiv == 4) {
                     voltsPerDiv = 0;
